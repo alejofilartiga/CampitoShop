@@ -3,6 +3,7 @@ import Feature1 from "./img/feature1.png"
 import Feature2 from "./img/feature2.png"
 import Feature3 from "./img/feature3.png"
 
+import { Link } from "react-router-dom"
 
 import { FeatureSection, 
          TitleContainer,
@@ -27,7 +28,7 @@ function Features() {
           <FeaturesImg src={Feature2} />
           <FeaturesImg src={Feature3} />
         </FeaturesContainer>
-        <FeatureBtn>TODOS LOS PRODUCTOS</FeatureBtn>
+        <Link to='/products'><FeatureBtn>TODOS LOS PRODUCTOS</FeatureBtn></Link>
       </FeatureSection>
     </>
   )

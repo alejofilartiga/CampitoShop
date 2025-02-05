@@ -41,7 +41,7 @@ export const FeaturesImg = styled.img`
 
 export const FeatureBtn = styled.button`
     margin-top: 30px;
-    width: 40%;
+    /* width: 100%; */
     font-size: 30px;
     padding: 0.3em 2em;
     border: transparent;

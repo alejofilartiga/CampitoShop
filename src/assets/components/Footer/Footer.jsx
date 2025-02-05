@@ -11,7 +11,7 @@ import Cencosud from "./img/cencosud.png"
 import PagoFacil from "./img/pagofacil.png"
 import RapiPago from "./img/rapipago.png"
 
-
+import { Link } from "react-router-dom"
 
 import { FooterStyled, Title, Container, LinksContainer, Links, PayContainer, PayImg, Info } from "./footerStyle"
 import Card from "./Card"
@@ -25,10 +25,10 @@ function Footer() {
           <Card/>
         </Container>
         <LinksContainer>
-          <Links href="#">Inicio |</Links>
-          <Links> Productos |</Links>
-          <Links> Nosotros |</Links>
-          <Links> Contacto</Links>
+          <Link to='/home'><Links>Inicio |</Links></Link>
+          <Link to='/products'><Links> Productos |</Links></Link>
+          <Link to='/about'><Links> Nosotros |</Links></Link>
+          <Link to='/contact'><Links> Contacto</Links></Link>
         </LinksContainer>
         <PayContainer>
           <PayImg src={Visa}/>
@@ -44,7 +44,7 @@ function Footer() {
           <PayImg src={PagoFacil}/>
           <PayImg src={RapiPago}/>
         </PayContainer>
-        <Info>Copyright CAMPITO - Idea de alejofilartiga - 2025. Todos los derechos reservados.</Info>
+        <Info>Copyright CAMPITO - Idea de <Links href="https://github.com/alejofilartiga" className="name">AlejoFilártiga</Links>  - 2025. Todos los derechos reservados.</Info>
       </FooterStyled>
     </>
   )

@@ -1,6 +1,6 @@
 import { HeroSection, TitleContainer, BtnContainer, BtnHero, ImageContainer, ImageHero, Title } from "./heroStyle"
 import Nuevo from "./img/nuevo.png"
-
+import { Link } from "react-router-dom"
 
 function Hero() {
   return (
@@ -9,8 +9,8 @@ function Hero() {
           <TitleContainer>
             <Title>¡TIENDA OFICIAL DEL CAMPITO!</Title>
             <BtnContainer>
-              <BtnHero>PRODUCTOS</BtnHero>
-              <BtnHero>CONTACTO</BtnHero>
+              <Link to='/products'><BtnHero>PRODUCTOS</BtnHero></Link>
+              <Link to='/contact'><BtnHero>CONTACTO</BtnHero></Link>
             </BtnContainer>
           </TitleContainer>
           <ImageContainer>

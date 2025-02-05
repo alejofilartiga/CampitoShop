@@ -9,24 +9,23 @@ import { HeaderContainer,
          CartContainer
  } from "./headerStyle"
 
+import { Link } from "react-router-dom"
 
-
-
- 
 function Header() {
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer style={{ zIndex: 3 }}>
         <NavContainer>
           <Menu>MENU</Menu>
           <LogoContainer>
-            <Logo src={Escudo}/>
-            <LogoTitle>SHOP</LogoTitle>
+            <Link to='/home' className="LinkContainer">
+              <Logo src={Escudo}/>
+              <LogoTitle>SHOP</LogoTitle>
+            </Link>
           </LogoContainer>
           <CartContainer>
             <Cart>CARRITO</Cart>
           </CartContainer>
-      
         </NavContainer>
       </HeaderContainer>
     </>

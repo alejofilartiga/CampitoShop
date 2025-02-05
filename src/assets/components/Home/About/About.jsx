@@ -1,7 +1,8 @@
 import {AboutSection, InfoContainer, AboutTitle, AboutInfo, AboutButton, ImageContainer, ImageAbout} from "./aboutStyle"
-
 import AbtHome from "./img/abthome.png"
-function About() {
+import { Link } from 'react-router-dom';
+
+function AboutHome() {
   return (
     <>
       <AboutSection>
@@ -15,7 +16,9 @@ function About() {
                         en el Campito Delfo Cabrera, en la calle
                         Irigoyen. Unite a nuestra pasion y llevala a todos lados.
           </AboutInfo>
-          <AboutButton>MÁS INFORMACION</AboutButton>
+          <Link to='/about'>
+            <AboutButton>MÁS INFORMACION</AboutButton>
+          </Link>
         </InfoContainer>
         <ImageContainer>
           <ImageAbout src={AbtHome} />
@@ -25,4 +28,4 @@ function About() {
   )
 }
 
-export default About
+export default AboutHome

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 
+
 export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
@@ -70,6 +71,16 @@ export const LogoContainer = styled.div`
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    .LinkContainer {
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+
 `
 
 export const Logo = styled.img`

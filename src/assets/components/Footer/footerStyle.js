@@ -47,4 +47,10 @@ export const PayImg = styled.img`
 export const Info = styled.h2`
     color: white;
     font-size: 15px;
+
+    .name{
+        font-size: 15px;
+    }
+
 `
+
