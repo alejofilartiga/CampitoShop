@@ -15,15 +15,34 @@ export const TitleContainer = styled.div`
     align-items: center;
     gap: 20px;
     width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+        padding-top: 10%;
+    }
 `
 
 export const TitleImg = styled.img`
     width: 100px;
+
+    @media (max-width: 492px) {
+        width: 70px;
+    }
+
 `
 
 export const Title = styled.h2`
     font-size: 70px;
     color: white;
+    text-align: center;
+
+    @media (max-width: 492px) {
+        font-size: 45px;
+    } 
+
 `
 
 export const FeaturesContainer = styled.div`
@@ -32,16 +51,21 @@ export const FeaturesContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
 `
 
 export const FeaturesImg = styled.img`
-    width: 450px;
+    width: 420px;
     border-radius: 10px;
+
+    @media (max-width: 492px) {
+        width: 300px;
+    }
+
 `
 
 export const FeatureBtn = styled.button`
     margin-top: 30px;
-    /* width: 100%; */
     font-size: 30px;
     padding: 0.3em 2em;
     border: transparent;
@@ -50,6 +74,10 @@ export const FeatureBtn = styled.button`
     color: white;
     border-radius: 4px;
     font-family: "Lilita One", cursive;
+
+    @media (max-width: 492px) {
+        font-size: 20px;
+    }
 
     &:hover {
         background: #006600;

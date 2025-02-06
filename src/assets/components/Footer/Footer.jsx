@@ -17,6 +17,7 @@ import { FooterStyled, Title, Container, LinksContainer, Links, PayContainer, Pa
 import Card from "./Card"
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <FooterStyled>
@@ -44,7 +45,7 @@ function Footer() {
           <PayImg src={PagoFacil}/>
           <PayImg src={RapiPago}/>
         </PayContainer>
-        <Info>Copyright CAMPITO - Idea de <Links href="https://github.com/alejofilartiga" className="name">AlejoFilártiga</Links>  - 2025. Todos los derechos reservados.</Info>
+        <Info>Copyright CAMPITO - Idea de <Links href="https://github.com/alejofilartiga" className="name">AlejoFilártiga</Links> - {currentYear}. Todos los derechos reservados.</Info>
       </FooterStyled>
     </>
   )

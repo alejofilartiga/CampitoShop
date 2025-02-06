@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import cover from "./img/cover.jpg";
 export const GallerySection = styled.section`
     background-color:rgb(17, 16, 16);
     width: 100%;
@@ -7,7 +7,14 @@ export const GallerySection = styled.section`
     justify-content: center;
     align-items: center;
     gap: 40px;
-    overflow: hidden;
+
+    @media (max-width: 768px) {
+        background-image: url(${cover});
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+        background-position: center;
+    }
 `
 
 export const ContainerLeft = styled.div`
@@ -18,6 +25,9 @@ export const ContainerLeft = styled.div`
     margin-top: 20px;
     width: 25%;
 
+    @media (max-width: 768px) {
+        display: none;
+    }
 `
 
 export const ImageLeft = styled.img`
@@ -37,6 +47,11 @@ export const ContainerRight = styled.div`
     align-items: center;
     justify-content: center;
     
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
 `
 
 export const ImageRight = styled.img`

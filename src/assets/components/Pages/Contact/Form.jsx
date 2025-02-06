@@ -20,6 +20,12 @@ const Form = () => {
 
 const StyledWrapper = styled.div`
     width: 100%;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .contact-form {
     background-color: #000700;
     padding: 20px;
@@ -55,6 +61,9 @@ const StyledWrapper = styled.div`
     resize: none;
     height: 80px;
     width: 97%;
+    @media (max-width: 492px) {
+      width: 95%;
+    }
   }
 
   .contact-form input, .contact-form textarea {

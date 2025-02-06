@@ -12,17 +12,28 @@ export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 40%;
-
+    @media (max-width: 768px) {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
 `
 
 export const AboutTitle = styled.h2`
     font-size: 40px;
     color: white;
+    @media (max-width: 768px) {
+        font-size: 30px;
+        text-align: center;
+    }
 `
 
 export const AboutInfo = styled.p`
     font-size: 25px;
     width: 80%;
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `
 
 export const AboutButton = styled.button`
@@ -36,6 +47,12 @@ export const AboutButton = styled.button`
     border-radius: 4px;
     font-family: "Lilita One", cursive;
 
+    @media (max-width: 768px) {
+        font-size: 20px;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
     &:hover {
         background:rgb(255, 255, 255);
         background: linear-gradient(90deg, rgb(81, 170, 98) 0%, rgba(2, 103, 0, 0.85) 100%);
@@ -47,9 +64,11 @@ export const AboutButton = styled.button`
 `
 
 export const ImageContainer = styled.div`
-
+    @media (max-width: 768px) {
+        display: none;
+    }
 `
 
 export const ImageAbout = styled.img`
- 
+    
 `

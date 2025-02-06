@@ -13,6 +13,10 @@ export const Tittle = styled.h2`
     color: white;
     font-size: 60px;
     text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
 `
 
 export const SponsorsContainer = styled.div`

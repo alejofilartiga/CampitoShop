@@ -42,11 +42,20 @@ export const PayContainer = styled.div`
 
 export const PayImg = styled.img`
     width: 30px;
+
+    @media (max-width: 492px) {
+        width: 22px;
+    }
+
 `
 
 export const Info = styled.h2`
     color: white;
     font-size: 15px;
+
+    @media (max-width: 492px) {
+        text-align: center;
+    }
 
     .name{
         font-size: 15px;

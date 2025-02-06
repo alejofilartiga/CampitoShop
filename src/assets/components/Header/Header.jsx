@@ -1,7 +1,6 @@
 import Escudo from "./img/escudo.png"
 import { HeaderContainer,
          NavContainer,
-         Menu,
          LogoContainer,
          Logo,
          LogoTitle,
@@ -9,17 +8,22 @@ import { HeaderContainer,
          CartContainer
  } from "./headerStyle"
 
+ import { MenuProvider } from './MenuToggle/MenuContext';
+ import DropdownMenu from './MenuToggle/DropMenu';
 import { Link } from "react-router-dom"
 
+ 
 function Header() {
   return (
     <>
-      <HeaderContainer style={{ zIndex: 3 }}>
+      <HeaderContainer>
         <NavContainer>
-          <Menu>MENU</Menu>
+          <MenuProvider >
+            <DropdownMenu  />
+          </MenuProvider>
           <LogoContainer>
             <Link to='/home' className="LinkContainer">
-              <Logo src={Escudo}/>
+              <Logo src={Escudo} />
               <LogoTitle>SHOP</LogoTitle>
             </Link>
           </LogoContainer>
