@@ -11,6 +11,7 @@ export const ContactSection = styled.section`
     padding-bottom: 5%;
 
     @media (max-width: 768px) {
+        padding-top: 15%;
         flex-wrap: wrap;
         flex-direction: column;
         gap: 0px;
@@ -39,7 +40,7 @@ export const FormTitle = styled.h2`
     text-align: center;
 
     @media (max-width: 492px) {
-        font-size: 50px;
+        font-size: 40px;
         text-align: center;
     }
 `
@@ -69,6 +70,10 @@ export const RightTitle = styled.h2`
     color: #fff;
     text-align: center;
     
+    @media (max-width: 492px) {
+        font-size: 40px;
+        text-align: center;
+    }
 
 `
 

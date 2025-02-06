@@ -59,4 +59,9 @@ export const LigaContainer = styled.div`
 export const AfaImage = styled.img`
     width: 120px;
     padding: 40px;
+
+    @media (max-width: 768px) {
+        width: 50px;
+    }
+
 `

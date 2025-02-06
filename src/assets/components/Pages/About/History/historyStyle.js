@@ -9,6 +9,14 @@ export const HistorySection = styled.section`
     padding-top: 9%;
     padding-bottom: 5%;
     flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Para media queries */
+
 `
 
 export const InfoContainer = styled.div`
@@ -31,7 +39,7 @@ export const InfoTitle = styled.h2`
     font-size: 90px;
     margin-bottom: -10px;
     @media (max-width: 492px) {
-        font-size: 80px;
+        font-size: 70px;
     }
 `
 
@@ -52,4 +60,9 @@ export const ImageContainer = styled.div`
 export const Image = styled.img`
     width: 350px;
     border-radius: 15px;
+
+    @media (max-width: 492px) {
+        width: 300px;
+    }
+
 `

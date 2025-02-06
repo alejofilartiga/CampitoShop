@@ -11,6 +11,7 @@ export const FooterStyled = styled.footer`
 `
 
 export const Title = styled.h2`
+    text-align: center;
     color: white;
     font-size: 30px;
 `
@@ -25,6 +26,11 @@ export const Container = styled.div`
 
 export const LinksContainer = styled.div`
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
 `
 
 export const Links = styled.a`
@@ -52,10 +58,8 @@ export const PayImg = styled.img`
 export const Info = styled.h2`
     color: white;
     font-size: 15px;
-
-    @media (max-width: 492px) {
-        text-align: center;
-    }
+    flex-wrap: wrap;
+    text-align: center;
 
     .name{
         font-size: 15px;

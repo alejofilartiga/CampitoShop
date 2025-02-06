@@ -26,10 +26,10 @@ function Footer() {
           <Card/>
         </Container>
         <LinksContainer>
-          <Link to='/home'><Links>Inicio |</Links></Link>
-          <Link to='/products'><Links> Productos |</Links></Link>
-          <Link to='/about'><Links> Nosotros |</Links></Link>
-          <Link to='/contact'><Links> Contacto</Links></Link>
+          <Link to='/home'><Links>Inicio</Links></Link>
+          <Link to='/products'><Links>Productos</Links></Link>
+          <Link to='/about'><Links>Nosotros</Links></Link>
+          <Link to='/contact'><Links>Contacto</Links></Link>
         </LinksContainer>
         <PayContainer>
           <PayImg src={Visa}/>

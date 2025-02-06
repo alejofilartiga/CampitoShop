@@ -2,6 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 
+/* *{
+  border: 1px solid red;   
+
+} */
 
   html{
     scroll-behavior: smooth;
