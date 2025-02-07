@@ -16,6 +16,7 @@
     "@mui/styled-engine-sc": "^6.4.2",
     "@react-spring/web": "^9.7.5",
     "@reduxjs/toolkit": "^2.5.1",
+    "@remix-run/dev": "^2.15.3",
     "@splidejs/react-splide": "^0.7.12",
     "embla-carousel-react": "^8.5.2",
     "formik": "^2.4.6",
