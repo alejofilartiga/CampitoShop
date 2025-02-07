@@ -1,23 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import React from 'react';
+import Routes from './Routes/Routes'; // Asegúrate de que esta ruta sea correcta
+import Header from "./assets/components/Header/Header"
 import Layout from "./assets/components/Layout/Layout"
-import Home from "./assets/components/Home/Home"
-import Products from "./assets/components/Pages/Products/Products"
-import Contact from "./assets/components/Pages/Contact/Contact"
-import About from "./assets/components/Pages/About/About"
+import Footer from "./assets/components/Footer/Footer"
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="products" element={<Products />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="about" element={<About />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Layout>
+      <Header />
+      <Routes />
+      <Footer />
+    </Layout>
   )
 }
 

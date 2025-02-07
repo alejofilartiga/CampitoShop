@@ -111,5 +111,16 @@ export const ProductsSection = styled.section`
 `
 
 export const CardsContainer = styled.div`
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
 `
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+`;
+

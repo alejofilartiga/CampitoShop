@@ -7,9 +7,17 @@ export const GlobalStyles = createGlobalStyle`
 
 } */
 
+  *{
+    
+          font-weight: 100;
+
+
+  }
+
   html{
     scroll-behavior: smooth;
-    font-family: "Lilita One", serif;
+    font-family: "Lilita One", sans-serif;
+
   }
 
     body {
@@ -17,11 +25,12 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-family: "Lilita One", serif;
     -webkit-tap-highlight-color: transparent;
-    overflow-x: hidden
+    overflow-x: hidden;
     }
 
     a {
     text-decoration: none;
+    color: white;
     }
 
     a:visited {

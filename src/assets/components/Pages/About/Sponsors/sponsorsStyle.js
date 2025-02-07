@@ -9,7 +9,7 @@ export const SponsorsSection = styled.section`
     flex-direction: column;
 `
 
-export const Tittle = styled.h2`
+export const Title = styled.h2`
     color: white;
     font-size: 60px;
     text-align: center;

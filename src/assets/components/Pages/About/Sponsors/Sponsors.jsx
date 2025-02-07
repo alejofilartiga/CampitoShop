@@ -15,7 +15,7 @@ import {
   ImageSponsor,
   LigaContainer,
   AfaImage,
-  Tittle
+  Title
 } from "./sponsorsStyle"
 
 
@@ -23,7 +23,7 @@ function Sponsors() {
   return (
     <>
       <SponsorsSection>
-        <Tittle>¡AGRADECEMOS A NUESTROS SPONSORS!</Tittle>
+        <Title>¡AGRADECEMOS A NUESTROS SPONSORS!</Title>
         <SponsorsContainer>
           <ImageContainer>
             <ImageSponsor src={Kabro} alt="Kabro" />

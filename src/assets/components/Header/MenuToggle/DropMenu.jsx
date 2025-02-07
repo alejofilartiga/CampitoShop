@@ -37,10 +37,10 @@ const DropdownMenu = () => {
       <Menu onClick={toggleMenu}>{isOpen ? 'X' : 'MENU'}</Menu>
       {isOpen && (
        <LinksContainer  isOpen={isOpen}>
-            <Link onClick={toggleMenu} className='linkStyle' to='home'>INICIO</Link>
-            <Link onClick={toggleMenu} className='linkStyle' to='products'>PRODUCTOS</Link>
-            <Link onClick={toggleMenu} className='linkStyle' to='contact'>CONTACTO</Link>
-            <Link onClick={toggleMenu} className='linkStyle' to='about'>NOSOTROS</Link>
+            <Link onClick={toggleMenu} className='linkStyle' to='/'>INICIO</Link>
+            <Link onClick={toggleMenu} className='linkStyle' to='/products'>PRODUCTOS</Link>
+            <Link onClick={toggleMenu} className='linkStyle' to='/contact'>CONTACTO</Link>
+            <Link onClick={toggleMenu} className='linkStyle' to='/about'>NOSOTROS</Link>
        </LinksContainer>
       )}
     </StyledWrapper>

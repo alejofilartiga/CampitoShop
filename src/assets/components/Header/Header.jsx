@@ -22,7 +22,7 @@ function Header() {
             <DropdownMenu  />
           </MenuProvider>
           <LogoContainer>
-            <Link to='/home' className="LinkContainer">
+            <Link to='/' className="LinkContainer">
               <Logo src={Escudo} />
               <LogoTitle>SHOP</LogoTitle>
             </Link>

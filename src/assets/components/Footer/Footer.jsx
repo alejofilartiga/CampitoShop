@@ -26,10 +26,10 @@ function Footer() {
           <Card/>
         </Container>
         <LinksContainer>
-          <Link to='/home'><Links>Inicio</Links></Link>
-          <Link to='/products'><Links>Productos</Links></Link>
-          <Link to='/about'><Links>Nosotros</Links></Link>
-          <Link to='/contact'><Links>Contacto</Links></Link>
+          <Links><Link to='/'>Inicio</Link></Links>
+          <Links><Link to='/products'>Productos</Link></Links>
+          <Links><Link to='/about'>Nosotros</Link></Links>
+          <Links><Link to='/contact'>Contacto</Link></Links>
         </LinksContainer>
         <PayContainer>
           <PayImg src={Visa}/>
@@ -45,7 +45,7 @@ function Footer() {
           <PayImg src={PagoFacil}/>
           <PayImg src={RapiPago}/>
         </PayContainer>
-        <Info>Copyright CAMPITO - Idea de <Links href="https://github.com/alejofilartiga" className="name">AlejoFilártiga</Links> - {currentYear}. Todos los derechos reservados.</Info>
+        <Info>Copyright CAMPITO - Idea de <a href="https://github.com/alejofilartiga" className="name">AlejoFilártiga</a> - {currentYear}. Todos los derechos reservados.</Info>
       </FooterStyled>
     </>
   )

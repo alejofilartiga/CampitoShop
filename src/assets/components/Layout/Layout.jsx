@@ -1,16 +1,10 @@
-import { Outlet } from "react-router-dom"
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
+import { LayoutWrapper } from "./layoutStyle"
 
-function Layout() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />    
-    </>
+const Layout = ({ children }) => {
+  return(
+    <LayoutWrapper>
+      {children}
+    </LayoutWrapper>
   )
 }
 
