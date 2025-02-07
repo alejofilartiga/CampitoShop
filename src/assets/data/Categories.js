@@ -2,7 +2,7 @@ const Categories = [
   {
     id: 1,
     name: "Indumentaria de Juego",
-    category: "Casual"
+    category: "Juego"
   },
   {
     id: 2,

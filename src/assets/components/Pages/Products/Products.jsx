@@ -1,31 +1,20 @@
 import Top from "./img/top.png"
-import { useSelector, useDispatch } from "react-redux"
-import { useEffect } from "react"
+import { useSelector } from "react-redux"
+
 import Card from "./Card/Card"
 import { TopSection, InfoContainer, Title, Info, ButtonTop, ImgTopContainer, ImgTop, ProductsSection, CardsContainer } from "./productsStyle"
 import Categorias from "./Categories/Categorias"
-import { ProductsShow } from "../../../data/ProductsData"
-import { selectCategory } from "../../../components/Redux/categories/categoriesSlice"
 
 const Products = () => {
-  const dispatch = useDispatch();
-  let products = useSelector((state) => state.products.products);
-  const { selectedCategory } = useSelector(state => state.categories)
+  const products = useSelector((state) => state.products.products);
+  const selectedCategory = useSelector(state => state.categories.selectedCategory);
 
-  useEffect(() => {
-    if (!selectedCategory) {
-      dispatch(selectCategory('All'));
-    }
-  }, [selectedCategory, dispatch]);
+  let filteredProducts = [];
 
-  if (selectedCategory && selectedCategory !== 'All') {
-    products = products[selectedCategory] || [];
+  if (selectedCategory) {
+    filteredProducts = products.filter(product => product.category === selectedCategory);
   } else {
-    products = [
-      ...ProductsShow['Juego'] || [],
-      ...ProductsShow['Casual'] || [],
-      ...ProductsShow['Otros'] || []
-    ];
+    filteredProducts = products;
   }
 
   return (
@@ -46,7 +35,7 @@ const Products = () => {
       <ProductsSection>
         <Categorias />
         <CardsContainer>
-          {Array.isArray(products) && products.map(product => (
+          {filteredProducts.map((product) => (
             <Card key={product.id} {...product} />
           ))}
         </CardsContainer>

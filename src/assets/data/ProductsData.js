@@ -68,6 +68,13 @@ const ProductsData = [
         category: "Juego"
     },
     {
+        id: 15,
+        img: rompevientos,
+        title: "Campera Rompevientos Pre-Match",
+        price: 20200,
+        category: "Juego"
+    },
+    {
         id: 8,
         img: chomba,
         title: "Chomba de Pique",
@@ -117,13 +124,6 @@ const ProductsData = [
         category: "Casual"
     },
     {
-        id: 15,
-        img: rompevientos,
-        title: "Campera Rompevientos Pre-Match",
-        price: 20200,
-        category: "Juego"
-    },
-    {
         id: 16,
         img: taza,
         title: "Taza Termica con Escudo",
@@ -148,14 +148,14 @@ const ProductsData = [
 
 export default ProductsData;
 
-export const TotalProducts = ProductsData.length
+export const TotalProducts = ProductsData.length;
 
 export const ProductsShow = ProductsData.reduce((acc, product) => {
   if (!acc[product.category]) {
     acc[product.category] = [];
   }
 
-  acc[product.category] = [...acc[product.category], product];
+  acc[product.category].push(product);
 
   return acc;
 }, {});
