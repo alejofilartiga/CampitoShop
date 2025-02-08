@@ -1,4 +1,4 @@
-import Form from "./Form"
+import Form from "./Form/Form"
 
 import {ContactSection, FormContainer, FormTitle, RightContainer, RightTitle } from "./contactStyle"
 
