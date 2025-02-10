@@ -1,25 +1,27 @@
-import { ProductContainer, InfoContainer, ImageContainer, ImageProduct, TitleProduct, PriceProduct, QuantityNumber, QuantityButtonsContainer, QuantityButton, TrashContainer, TrashImage } from "./modalCartStyle";
-
-import trashimg from "./img/trash.png";
-import productimg from "../../../../data/img/titular.png"
-const CartCard = ({ img, title, price, quantity, id }) => {
+import { ProductContainer, ProductWrapper, InfoContainer, ImageContainer, ImageProduct, TitleProduct, PriceProduct, QuantityButtonsContainer, QuantityButton, TrashContainer, TrashImage } from "./modalCartStyle";
+import {useDispatch} from "react-redux";
+import {addProduct, removeProduct} from "../../../Redux/cart/cartSlice"
+import trash from "./img/trash.png";
+const CartCard = ({img,title,price,quantity,id}) => {
+    const dispatch = useDispatch()
     return (
         <ProductContainer>
-        <ImageContainer>
-            <ImageProduct src={productimg}  />
-        </ImageContainer>
-        <InfoContainer>
-            <TitleProduct>CHOMBA</TitleProduct>
-            <PriceProduct>$12500</PriceProduct>
-            <QuantityButtonsContainer>
-            <QuantityButton>-</QuantityButton>
-            <QuantityNumber>3</QuantityNumber>
-            <QuantityButton>+</QuantityButton>
-            </QuantityButtonsContainer>
-        </InfoContainer>
-        <TrashContainer>
-            <TrashImage src={trashimg} alt="trash" />
-        </TrashContainer>
+            <ProductWrapper>
+                <ImageContainer>
+                    <ImageProduct src={img} alt={title}  />
+                </ImageContainer>
+                <InfoContainer>
+                    <TitleProduct>{title}</TitleProduct>
+                    <PriceProduct>${price} | {quantity} </PriceProduct>
+                    <QuantityButtonsContainer>
+                    <QuantityButton onClick={()=> dispatch(removeProduct(id))}>-</QuantityButton>
+                    <QuantityButton onClick={()=> dispatch(addProduct({img,title,price,id}))}>+</QuantityButton>
+                    </QuantityButtonsContainer>
+                </InfoContainer>
+            </ProductWrapper>
+            <TrashContainer onClick={()=> dispatch(removeProduct(id))} >
+                <TrashImage src={trash}  />
+            </TrashContainer>
         </ProductContainer>
     );
 }

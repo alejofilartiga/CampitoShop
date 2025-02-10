@@ -50,21 +50,20 @@ export const ToggleIcon = styled.img`
 `
 
 export const Menu = styled.h2`
-    z-index: 1000;
+    z-index: 3;
     color: white;
     font-size: 30px;
     margin-left: 20px;
     width: 90px;
     cursor: pointer;
+
+    &&:hover{
+        color:rgb(15, 167, 15);
+        font-weight: 700;
+    }
+
+
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    border: none;
-    background: none;
-    text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-    
     @media (max-width: 492px) {
         font-size: 15px;
     }
@@ -73,29 +72,5 @@ export const Menu = styled.h2`
         display: none;
     }
 
-    &:focus,
-    &:hover {
-        color: #fff;
-    }
-    
-    &:focus:after,
-    &:hover:after {
-        
-        width: 50%;
-        left: 0%;
-    }
 
-    &:after {
-        content: "";
-        pointer-events: none;
-        bottom: -2px;
-        left: 50%;
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        background-color: #fff;
-        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-        transition-duration: 400ms;
-        transition-property: width, left;
-    }
 `

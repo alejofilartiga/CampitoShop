@@ -6,7 +6,7 @@ import { HeaderContainer,
          LogoTitle,
          CartContainer
  } from "./headerStyle"
-import CartBadge from "./Cart/CartBadge/CartBadge";
+import CartBadgeComponent from "./Cart/CartBadge/CartBadge";
 import { MenuProvider } from './MenuToggle/MenuContext';
 import DropdownMenu from './MenuToggle/DropMenu';
 import { Link } from "react-router-dom"
@@ -26,7 +26,7 @@ function Header() {
             </Link>
           </LogoContainer>
           <CartContainer>
-            <CartBadge/>
+            <CartBadgeComponent/>
             <CartModal/>
           </CartContainer>
         </NavContainer>
