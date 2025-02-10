@@ -4,15 +4,13 @@ import { HeaderContainer,
          LogoContainer,
          Logo,
          LogoTitle,
-         Cart,
          CartContainer
  } from "./headerStyle"
-
- import { MenuProvider } from './MenuToggle/MenuContext';
- import DropdownMenu from './MenuToggle/DropMenu';
+import CartBadge from "./Cart/CartBadge/CartBadge";
+import { MenuProvider } from './MenuToggle/MenuContext';
+import DropdownMenu from './MenuToggle/DropMenu';
 import { Link } from "react-router-dom"
-
- 
+import CartModal from "./Cart/CartModal/CartModal";
 function Header() {
   return (
     <>
@@ -28,10 +26,13 @@ function Header() {
             </Link>
           </LogoContainer>
           <CartContainer>
-            <Cart>CARRITO</Cart>
+            <CartBadge/>
+            <CartModal/>
           </CartContainer>
         </NavContainer>
       </HeaderContainer>
+   
+
     </>
   )
 }

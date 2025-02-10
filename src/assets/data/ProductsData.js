@@ -17,33 +17,36 @@ import suplente from "./img/suplente.png"
 import taza from "./img/taza.png"
 import titular from "./img/titular.png"
 
+const lastYear = new Date().getFullYear() - 1;
+const currentYear = new Date().getFullYear();
+
 const ProductsData = [
     {
         id: 1,
         img: nuevo,
         price: 25000,
-        title: "Camiseta Titular ",
+        title: `Camiseta Titular ${currentYear}`,
         category: "Juego",
     },
     {
         id: 2,
         img: titular,
-        title: "Camiseta Titular",
+        title: `Camiseta Titular ${lastYear}`,
         price: 18900,
         category: "Juego"
     },
     {
         id: 3,
         img: suplente,
-        title: "Camiseta Suplente",
+        title: `Camiseta Suplente ${currentYear}`,
         price: 18900,
         category: "Juego"
     },
     {
         id: 4,
         img: arquero,
-        title: "Camiseta Arquero",
-        price: 15900,
+        title: `Camiseta de Arquero ${currentYear}`,
+        price: 159600,
         category: "Juego"
     },
     {
@@ -56,7 +59,7 @@ const ProductsData = [
     {
         id: 6,
         img: short,
-        title: "Short de Juego Titular",
+        title: `Short de Juego Titular ${lastYear}`,
         price: 9500,
         category: "Juego"
     },
@@ -148,7 +151,6 @@ const ProductsData = [
 
 export default ProductsData;
 
-export const TotalProducts = ProductsData.length;
 
 export const ProductsShow = ProductsData.reduce((acc, product) => {
   if (!acc[product.category]) {

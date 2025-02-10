@@ -1,22 +1,20 @@
 import Top from "./img/top.png"
-import { useSelector } from "react-redux"
-
+import { useSelector, useDispatch } from "react-redux"
+import { addProduct } from "../../Redux/cart/cartSlice"
 import Card from "./Card/Card"
 import { TopSection, InfoContainer, Title, Info, ButtonTop, ImgTopContainer, ImgTop, ProductsSection, CardsContainer } from "./productsStyle"
 import Categorias from "./Categories/Categorias"
 
-const Products = () => {
+const Products = ({id,img,title,price}) => {
   const products = useSelector((state) => state.products.products);
   const selectedCategory = useSelector(state => state.categories.selectedCategory);
-
   let filteredProducts = [];
-
   if (selectedCategory) {
     filteredProducts = products.filter(product => product.category === selectedCategory);
   } else {
     filteredProducts = products;
   }
-
+  const dispatch = useDispatch();
   return (
     <>
       <TopSection>
@@ -26,7 +24,7 @@ const Products = () => {
           </Title>
           <Info>Nueva piel, se renueva la pasion. <br />
           Consegui la actual camiseta del Campito para esta temporada.</Info>
-          <ButtonTop>AÑADIR AL CARRITO</ButtonTop>
+          <ButtonTop onClick={() => dispatch(addProduct({id,img,title,price}))} >AÑADIR AL CARRITO</ButtonTop>
         </InfoContainer>
         <ImgTopContainer>
           <ImgTop src={Top} />

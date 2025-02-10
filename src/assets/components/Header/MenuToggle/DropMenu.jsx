@@ -1,10 +1,11 @@
 import { useContext, useEffect, useRef } from 'react';
 import { MenuContext } from './MenuContext';
-
+import menutoggle from "./img/menutoggle.png";
 import {
         StyledWrapper,
         LinksContainer,
         Menu,
+        ToggleIcon
 } from './menuStyle'
 
 import {Link} from 'react-router-dom';
@@ -34,6 +35,7 @@ const DropdownMenu = () => {
 
   return (
     <StyledWrapper ref={menuRef}>
+      <ToggleIcon src={menutoggle} onClick={toggleMenu}/>
       <Menu onClick={toggleMenu}>{isOpen ? 'X' : 'MENU'}</Menu>
       {isOpen && (
        <LinksContainer  isOpen={isOpen}>

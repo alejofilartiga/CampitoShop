@@ -37,6 +37,18 @@ export const LinksContainer = styled.div`
     }
 `;
 
+
+export const ToggleIcon = styled.img`
+    display: none;
+    margin-left: 20px;
+    width: 30px;
+    height: 20px;
+    z-index: 2;
+    @media (max-width: 768px) {
+        display: flex;
+    }
+`
+
 export const Menu = styled.h2`
     z-index: 1000;
     color: white;
@@ -55,6 +67,10 @@ export const Menu = styled.h2`
     
     @media (max-width: 492px) {
         font-size: 15px;
+    }
+
+    @media(max-width: 768px){
+        display: none;
     }
 
     &:focus,
