@@ -56,7 +56,7 @@ const Form = () => {
               label="Envia un mensaje"
               isError={touched.comments && errors.comments}
             />
-            <Submit disabled={!(isValid && dirty)} text={!(isValid && dirty) ? "Completa los campos correctamente" : "Enviar"} />
+            <Submit disabled={!(isValid && dirty)} children={!(isValid && dirty) ? "Completa los campos correctamente" : "Enviar"} />
           </FormStyled>
         </FormContainer>
       </StyledWrapper>

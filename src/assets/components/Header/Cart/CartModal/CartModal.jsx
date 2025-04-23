@@ -1,7 +1,7 @@
 import CartCard from "./CartCard"
 import { StyledWrapper, TopContainer, TitleTop, CloseButton, MainContainer, TotalContainer, TotalPriceTitle, BottomButtonsContainer, BottomButtonStyled, Divider, BlurBackground } from "./modalCartStyle"
-import { useEffect, useRef, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux"
 import { clearCart, toggleHiddenCart } from "../../../Redux/cart/cartSlice"
 import PopUp from "./PopUp";
@@ -79,8 +79,7 @@ const CartModal = () => {
             <BottomButtonsContainer>
                 <BottomButtonStyled onClick={() => 
                 {
-                  navigate('/successful');
-                  dispatch(clearCart());
+                  navigate('/checkout');
                   dispatch(toggleHiddenCart());
                 }} disabled={!cartItems.length}>COMPRAR</BottomButtonStyled>
                 <BottomButtonStyled onClick={handleClearCart} disabled={!cartItems.length}>VACIAR</BottomButtonStyled>

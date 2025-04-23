@@ -8,8 +8,7 @@ export const GlobalStyles = createGlobalStyle`
 } */
 
   *{
-    
-          font-weight: 100;
+
           user-select: none;
   }
 

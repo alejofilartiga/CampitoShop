@@ -11,7 +11,7 @@ export const LabelStyled = styled.label`
     width: 100%;
     color: white;
     margin-bottom: 10px;
-
+    font-weight: 200; 
 `
 
 export const InputStyled = styled.input`
@@ -19,7 +19,7 @@ export const InputStyled = styled.input`
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
-
+    
     &&:focus{
         z-index: 1;
         position: relative;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Routes from './Routes/Routes'; // Asegúrate de que esta ruta sea correcta
+import Routes from './Routes/Routes';
 import Header from "./assets/components/Header/Header"
 import Layout from "./assets/components/Layout/Layout"
 import Footer from "./assets/components/Footer/Footer"

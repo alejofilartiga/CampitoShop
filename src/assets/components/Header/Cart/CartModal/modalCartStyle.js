@@ -74,11 +74,12 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding-left: 20px;
     gap: 20px;
     height: 80%;
     overflow: scroll;
+    overflow-y: auto;
 
     &::-webkit-scrollbar {
     background: transparent;

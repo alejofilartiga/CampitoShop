@@ -1,10 +1,14 @@
 import React from 'react';
 import { ButtonSubmitStyled } from './submitStyle';
 
-const Submit = ({ disabled, text }) => {
+const Submit = ({ disabled = false, children, onClick }) => {
   return (
-    <ButtonSubmitStyled type="submit" disabled={disabled}>
-      {text}
+    <ButtonSubmitStyled 
+      type="submit" 
+      disabled={disabled}
+      onClick={onClick}
+      >
+        {children}
     </ButtonSubmitStyled>
   );
 };
