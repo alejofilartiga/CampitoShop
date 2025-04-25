@@ -1,1 +1,1 @@
-export const BASE_URL = "https://";
+export const BASE_URL = "https://order-api-bice.vercel.app/orders";

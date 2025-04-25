@@ -38,7 +38,7 @@ const CheckoutForm = ({cartItems, price}) => {
             items: cartItems,
             price,
             total: price,
-            user: values.name,
+            shippingDetails: {...values},
           };
           try{
             await createOrder(orderData, dispatch);
